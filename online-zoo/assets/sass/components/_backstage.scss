@@ -1,0 +1,135 @@
+.backstage__wrapper {
+    @include columns($width:40%);
+    padding: 145px 0 171px;
+    color: $color-heading;
+    @include media-small-desktop {
+        padding-top: 109px;
+    }
+    @include media-ipad {
+        // flex-direction: column;
+    }
+    @include media-tablet {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    @media (max-width:500px) {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+}
+    
+.backstage__image {
+    background-image: url(../images/bamboo-cap.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-basis: 50%;
+    max-width: 100%;
+
+    @include media-small-desktop {
+        background-image: url(../images/bamboo-cap-small.jpg);
+
+    }
+    @include media-ipad {
+        background-image: url(../images/bamboo-cap.jpg);
+        display: block;
+    }
+    @include media-tablet {
+        display: none;
+    }
+}
+.backstage__info {
+    flex-basis: 465px;
+    @include media-small-desktop {
+        flex-basis: 47%;
+    }
+    @include media-tablet {
+        flex-basis: 495px;
+    }
+}
+
+.backstage__first-title {
+    margin: 0 auto 20px;
+
+}
+
+.backstage__second-title {
+    margin: 0 auto 34px;
+    @include media-tablet {
+    margin: 0 auto 20px; 
+    }
+}
+
+.backstage__first-description{
+        margin: 0 auto 54px;
+        @include font($size:1.6rem, $height:2.1rem);
+        @include media-tablet {
+            margin: 0 auto 30px;
+        }
+       
+       }
+
+.backstage__second-description{
+        margin: 0 auto;
+        @include font($size:1.6rem, $height:2.2rem);
+}
+.backstage {
+    position: relative;
+}
+.backstage__style {
+    position: absolute;
+    right: 0;
+    bottom: 90px;
+    max-width: 100%;
+    @media (max-width: 1600px) { 
+		scale: 0.8;
+        right: -19px;
+        bottom: 48px;
+		}
+        @media (max-width: 1400px) { 
+            scale: 0.65;
+            right: -35px;
+            bottom: 68px;
+            }
+            @media (max-width: 1300px) { 
+                scale: 0.5;
+                right: -50px;
+                bottom: 88px;
+                }
+    @include media-small-desktop {
+        display: none;
+    }
+    @include media-tablet{
+        display: block;
+        scale: 1;
+        bottom: -20px;
+        right: 0;
+    }
+    @media (min-width: 570px) and (max-width: 600px) { 
+		scale: 0.8;
+        right: -13px;
+        bottom: 48px;
+		}
+    @media (min-width: 550px) and (max-width: 570px) { 
+        scale: 0.7;
+        right: -19px;
+        bottom: 44px;
+        }
+        @media (min-width: 500px) and (max-width: 550px) { 
+            scale: 0.5;
+            right: -33px;
+            bottom: 80px;
+            }
+    @media (max-width: 500px) {
+        scale: 1;
+        bottom: 191px;
+        right: 0;
+    }
+    @media (max-width: 430px) {
+        bottom: 267px;
+    }
+    @media (max-width:340px) {
+        bottom: 289px;
+    }
+}
+

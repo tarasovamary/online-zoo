@@ -1,0 +1,95 @@
+.header__logo_menu {
+    display: none;
+}
+.close-icon {
+    display: none;
+}
+@include media-tablet {
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 329px;
+        background-color:#FFFFFF;
+        transition: right 0.8s ease 0s;
+        padding: 10px 10px 40px;
+        z-index: 20;
+        flex-direction: column;
+    }
+   
+    .header__nav_active {
+        right: 0;
+    }
+    .header__logo_menu {
+        display: block;
+        a {
+            color: $color-additionaly;
+        }
+        border: 0.8px solid #FE9013;
+        border-radius: 2px;
+        width: 65px;
+    }
+    .header__logo_menu-link h1 {
+        @include font ($size:1.5rem, $height: 1.8rem);
+        margin: 0;
+    }
+    .header__logo_menu::after {
+        background-image: url(../../assets/icons/bamboo-menu.svg);
+        top: 18px;
+        left: 8px;
+    }
+    .header__list {
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .header__item {
+        padding: 0;
+        font-weight: 400;
+        a {
+            color: #333B41;
+            &:hover {
+                color: $color-additionaly;
+            }
+        }
+    }
+
+    .header__link-active:visited {
+    color: #333B41;
+    }
+
+    .header__item:first-child {
+        padding: 30px 0 0;
+    }
+    
+    .overlay {
+        display: none;
+    }
+    
+    .overlay.active {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    
+    
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 95%;
+        cursor: pointer;
+    }
+    
+    .hamburger_active {
+        transform: scale(0) translate(0px, -50%);
+    }
+}

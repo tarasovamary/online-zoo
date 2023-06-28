@@ -1,0 +1,33 @@
+.wrapper {
+    max-width: $content-width;
+    margin: auto;
+
+    @include media-another-desktop {
+        padding: 0 30px;
+
+    }
+    @include media-tablet {
+        padding: 0 20px;
+
+    }
+    @include media-mobile {
+        padding: 0 10px;
+    }
+}
+
+.wrapper2 {
+    max-width: $content-width;
+    margin: auto;
+
+    @include media-another-desktop {
+        padding: 0 30px;
+
+    }
+    @include media-tablet {
+        padding: 0;
+
+    }
+    @include small-tablet {
+        padding: 0 10px;
+    }
+}

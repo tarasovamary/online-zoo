@@ -1,0 +1,325 @@
+.pets__wrapper {
+    position: relative;
+    padding-bottom: 140px;
+    @include media-small-desktop {
+        padding-bottom: 100px
+    }
+    @include media-tablet {
+        padding-bottom: 60px;
+    }
+}
+.pets {
+    position: relative;
+    .pets__style-left {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+    .pets__style-right {
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        @include media-mobile {
+            bottom: -10px;
+        }
+    }
+}
+.pets__row {
+    @include columns($width:31%);
+    flex-wrap: nowrap;
+
+    @include media-tablet {
+    @include columns($width:47%);
+    }
+
+    @media (max-width:500px) {
+        @include columns($width:100%);
+    }
+    
+}
+
+.pet__content {
+    @include columns($width:content);
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    padding: 3px 6px 7px 14px;
+}
+
+
+.pet__name {
+    @include font($size:1.6rem, $height:2.2rem, $weight:500);
+    text-transform: uppercase;
+    margin: 0 auto;
+    @media (max-width:870px) {
+        @include font($size:1.4rem, $height:2rem, $weight:500);
+    }
+}
+
+.pet__home {
+    flex-grow: 1;
+    @include font($size:1.5rem, $height:1.8rem, $weight:300);
+    margin: 0 auto;
+    @media (max-width:870px) {
+        @include font($size:1.2rem, $height:1.8rem, $weight:300);
+    }
+}
+
+.pet {
+    width: 366px;
+    height: 426px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid $color-default;
+    transform: translateY(0px);
+    cursor: pointer;
+    // &:hover {
+    //     transition: all 0.8s;
+    //     max-height: 366px;
+    //     @include media-small-desktop {
+    //         max-height: 100%;
+    //     }
+    // }
+    &:hover .pet__image {
+        transition: all 0.8s;
+        transform: scale(1.1);
+        filter: brightness(0.7);
+    }
+    &:hover .pet__content {
+            transition: all 0.8s;
+            transform: translateY(-205px);
+            color: white;
+        }
+        &:hover .pet__icon {
+            transition: all 0.8s;
+            display: none;
+        }
+        .pet__image {
+            @media (max-width: 1440px) {
+                width: 295px;
+                height: 295px;
+            }
+            @media (max-width: 640px) {
+                width: 285px;
+                height: 285px;
+            }
+        }
+        @media (max-width: 1440px) {
+            width: 295px;
+            height: 355px;
+        }
+        @media (max-width: 640px) {
+            width: 285px;
+            height: 345px;
+        }
+        // @include media-small-desktop {
+        //     .pet__image {
+        //         width: 100%;
+        //         height: 100%;
+        //     }
+        // }
+    
+}
+
+// @include media-tablet {
+//     #card-penguins, #card-gorillas {
+//         display: none;
+//     }
+// }
+
+
+
+// .pets__wrapper article:nth-child(-n+3) {
+//     margin-bottom: 20px;
+// }
+
+.pets__button {
+    margin:80px auto 0;
+    display: flex;
+    justify-content: center;
+    @media (max-width:50px) {
+        margin:0 auto;
+    }
+}
+
+
+.pet__button {
+    display: inline;
+    @media (max-width:500px) {
+        display: none;
+    }
+}
+.pet__button-left, .pet__button-right {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    background: $color-orange-gradient;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        background: $color-default;
+    }
+    &:active {
+        background: $color-active;
+    }
+    @include media-another-desktop {
+        position: relative;
+    }
+}
+
+.pet__button-left {
+    bottom: 760px;
+    left: -71px;
+    @include media-another-desktop{
+        bottom: 583px;
+        left: 40%;
+    }
+    @media (max-width:1150px) {
+        left: 35%;
+    }
+    @media (max-width:925px) {
+        left: 46%;
+    }
+    @media (max-width:900px) {
+        bottom: 457px;
+        left: 40%;
+    }
+    @include media-tablet {
+        bottom: 465px;
+        left: 37%;
+    }
+    @media (max-width:590px) {
+        display: none;
+    }
+}
+
+.pet__button-right {
+    bottom: 760px;
+    right: -74px;
+    @include media-another-desktop {
+        bottom: 583px;
+        left: 55%;
+    }
+    @media (max-width:1150px) {
+        left: 50%;
+    }
+    @media (max-width:900px) {
+        bottom: 457px;
+        left: 46%;
+    }
+    @include media-tablet {
+        bottom: 465px;
+        left: 42%;
+    }
+    @media (max-width:590px) {
+        display: none;
+    }
+}
+
+.pets__slider {
+    display: none;
+    position: relative;
+}
+.slider-1, .slider-2, .slider-3 {
+    width: 1164px;
+    // height: 872px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    position: relative;
+    display: none;
+    @media (max-width: 1440px) {
+        gap: 90px 30px;
+
+    }
+    @media (max-width:1150px) {
+        gap: 90px 21px;
+        max-width: 100vw;
+    }
+    @media (max-width:590px) {
+        gap: 20px 21px;
+        max-width: 100vw;
+    }
+}
+
+.next, .active {
+    position: absolute;
+    display: flex;
+    animation: .4s ease-in-out;
+}
+.hidden {
+    height: 950px;
+    max-width: max-content;
+    position: relative;
+    overflow: hidden;
+    @media (max-width:900px) {
+        height: 824px;
+    }
+    @media (max-width:590px) {
+        height: 1078px;
+    }
+}
+
+.pets__content {
+    height: 880px;
+    width: 1159px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 90px;
+    position: relative;
+    @media (max-width:1150px) {
+        width: 1090px;
+    }
+    @media (max-width:1000px) {
+        width: 932px;
+    }
+    @media (max-width:900px) {
+        width: 843px;
+    }
+    @media (max-width:640px) {
+        width: 603px;
+    }
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.to-left {
+    animation-name: left;
+    animation-duration: 1s; 
+}
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+    animation-duration: 1s;
+}
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+    animation-duration: 1s;
+}
+.from-right {
+    animation-name: right;
+    animation-duration: 1s;
+}
+

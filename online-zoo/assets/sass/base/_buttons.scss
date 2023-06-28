@@ -1,0 +1,31 @@
+.button {
+    width: 298px;
+    padding: 16px 0;
+    @extend %font-prim;
+    @include font($size:1.6rem, $height:2.2rem, $weight:500);
+    cursor: pointer;
+    color: $color-white;
+    text-transform: uppercase;
+    background: $color-orange-gradient;
+    border: none;
+    // @extend %transition;
+    transition: width 5s ;
+    
+    &_rounded {
+        border-radius: 25px;
+    }
+    &_square {
+        border-radius: 5px;
+    }
+    &:hover {
+        background: $color-hover;
+    }
+    &:active {
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(228,114,9,1) 0%, rgba(228,114,9,1) 100%);
+    }
+     // &:focus {
+        // background: $color-disabled;
+    //}
+   
+}
+

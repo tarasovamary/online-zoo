@@ -1,0 +1,80 @@
+.logo, .footer__logo {
+    position: relative;
+    color: $color-white;
+    border: 1px solid $color-white;
+    border-radius: 2px;
+    text-align: center;
+    width: 82px;
+    padding: 3.55px 4.75px;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 10px;
+        background-image: url(../../assets/icons/bamboo-logo.svg);
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 21px;
+        @include media-tablet {
+           background-image: url(../../assets/icons/bamboo-tablet.svg);
+           top: 14px;
+           left: 21px; 
+        }
+    }
+    
+    @include media-tablet {
+        border: none;
+       padding: 1.5px 1px;
+    }
+}
+
+.header__logo-link, .footer__logo-link {
+    h1 {
+        margin: 0;
+        @include media-tablet {
+            @include font ($size:1.2rem, $height:1.5rem)
+        }
+    }
+}
+
+
+.footer__logo-link {
+    @include font ($size:1.9rem, $height:2.3rem);
+}
+
+
+.footer__logo {
+    @include media-tablet {
+        border: 0.5px solid $color-white;
+        border-radius: 2px;
+    }
+
+    @include media-tablet {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 22px;
+            left: 10px;
+            background-image: url(../../assets/icons/bamboo-logo.svg);
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 21px;
+        }
+    }
+    @include media-mobile {
+        width: 100%;
+        border: none;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 158px;
+            background-image: url(../../assets/icons/bamboo-logo.svg);
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 21px;
+
+        }
+    }
+    
+}
